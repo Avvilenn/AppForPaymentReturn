@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.1" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd">
+
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.avvilenn.student.servlets.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/orders</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>DeleteOrderServlet</servlet-name>
+    <servlet-class>com.avvilenn.student.servlets.DeleteOrderServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteOrderServlet</servlet-name>
+        <url-pattern>/deleteOrder</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>PersonDeleteServlet</servlet-name>
+    <servlet-class>com.avvilenn.student.servlets.PersonDeleteServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>PersonDeleteServlet</servlet-name>
+        <url-pattern>/deletePerson</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PersonListServlet </servlet-name>
+        <servlet-class>com.avvilenn.student.servlets.PersonListServlet </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonListServlet </servlet-name>
+        <url-pattern>/persons</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonLoginServlet</servlet-name>
+        <servlet-class>com.avvilenn.student.servlets.PersonLoginServlet </servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>SavePersonServlet</servlet-name>
+        <servlet-class>com.avvilenn.student.servlets.SavePersonServlet </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SavePersonServlet </servlet-name>
+        <url-pattern>/savePerson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SaveFormServlet </servlet-name>
+        <servlet-class>com.avvilenn.student.servlets.SaveFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveFormServlet </servlet-name>
+        <url-pattern>/saveForm</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>jdbc/CarDS</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+</web-app>

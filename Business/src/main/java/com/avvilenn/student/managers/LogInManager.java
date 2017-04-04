@@ -20,6 +20,17 @@ public class LogInManager {
     private LogInManager() {
     }
 
+
+    public PersonAdult getPerson (String email, String password)  throws BusinessException {
+        try {
+            PersonAdult person = dao.getPerson(email, password);
+            return person;
+        } catch (OrderException e) {
+            e.printStackTrace();
+            throw new BusinessException(e.getMessage());
+        }
+    }
+
     public  Long addPersonLogIn (PersonAdult person) throws BusinessException {
         try {
             Long id = dao.addPersonLogIn(person);

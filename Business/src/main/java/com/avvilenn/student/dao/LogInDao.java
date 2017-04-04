@@ -122,6 +122,41 @@ public class LogInDao implements  LogInDaoInterface{
         }
     }
 
+    public PersonAdult getPerson (String email, String password) throws OrderException {
+        try {
+            Connection con = getConnection();
+
+            try {
+                String sql = "SELECT * FROM log_in WHERE email=? and password=?";
+                PreparedStatement stmt = con.prepareStatement(sql);
+                stmt.setString(1, email);
+                stmt.setString(2, password);
+                ResultSet rs = stmt.executeQuery();
+                PersonAdult person = new PersonAdult();
+                while (rs.next()) {
+                    person.setPersonId(rs.getLong("log_id"));
+                    person.setEmail(rs.getString("email"));
+                    person.setPassword(rs.getString("password"));
+                }
+
+                rs.close();
+                stmt.close();
+                return person;
+            } catch (SQLException e) {
+                e.printStackTrace();
+                OrderException o = new OrderException("addOrderException", 1);
+                throw o;
+            } finally {
+                con.close();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            OrderException o = new OrderException("addOrderException", 1);
+            throw o;
+        }
+    }
+
     public List<PersonAdult> getAllPersons() throws OrderException {
         try {
             Connection con = getConnection();
