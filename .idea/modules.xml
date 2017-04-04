@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppForPaymentReturn.iml" filepath="$PROJECT_DIR$/AppForPaymentReturn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Business/Business.iml" filepath="$PROJECT_DIR$/Business/Business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonTypes/CommonTypes.iml" filepath="$PROJECT_DIR$/CommonTypes/CommonTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Studentorderweb/Student-order-web.iml" filepath="$PROJECT_DIR$/Studentorderweb/Student-order-web.iml" />
+    </modules>
+  </component>
+</project>
