@@ -43,6 +43,11 @@
         <servlet-name>PersonLoginServlet</servlet-name>
         <servlet-class>com.avvilenn.student.servlets.PersonLoginServlet </servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonLoginServlet</servlet-name>
+        <url-pattern>/LLogin</url-pattern>
+    </servlet-mapping>
+
 
 
     <servlet>

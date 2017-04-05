@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <title>Все заявки студентов</title>
+    <title>All orders</title>
     <link rel="shortcut icon" href="images/lotus.ico" type="image/x-icon">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,32 +26,12 @@
         <div class="row ">
             <div class="top-line">
 
-            <div class="col-md-12 welcome">LIST OF CARS</div>
+            <div class="col-md-12 welcome">ORDERS</div>
 
             </div>
         </div>
-        <div class="row">
-         <div class="mylinks">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
-           <div >
 
 
-
-                      </div>
-                      <hr>
-                      <hr>
-
-                       <div class>
-
-
-                                            </div>
-                     <hr>
-                     <hr>
-          </div>
-          <div class="col-md-4"></div>
-        </div>
-        </div>
         <div class="row" >
 <div class="placeHolderForForm">
             <div class="col-md-2 ">

@@ -13,6 +13,7 @@ public class BasicChecker extends Thread {
 
     @Override
     public void run() {
+        System.out.println("basic checker run");
         GetStudentOrders.setOrders();
         GRNchecker grn = new GRNchecker();
         grn.start();

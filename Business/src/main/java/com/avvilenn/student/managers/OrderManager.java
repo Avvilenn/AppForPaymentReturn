@@ -22,7 +22,7 @@ public class OrderManager {
     public Long addOrder (StudentOrder order) throws BusinessException {
         try {
             Long id = dao.addOrder(order);
-            if (id%1==0){
+            if (id%10==0){
                 TriggerForCheckers();
             }
             return id;

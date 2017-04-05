@@ -21,7 +21,7 @@ public class LogInDao implements  LogInDaoInterface{
     public Long addPersonLogIn(PersonAdult person) throws OrderException {
         try {
             Connection con = getConnection();
-            con.setAutoCommit(false);
+
             try {
                 String sql = "INSERT INTO log_in (email, password) VALUES (?, ?)";
 
@@ -39,7 +39,7 @@ public class LogInDao implements  LogInDaoInterface{
                     savedId = gk.getLong(1);
                 }
                 person.setPersonId(savedId);
-                con.commit();
+
                 stmt.close();
 
                 return savedId;

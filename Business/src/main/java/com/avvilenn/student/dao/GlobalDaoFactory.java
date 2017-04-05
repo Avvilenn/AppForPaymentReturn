@@ -14,7 +14,7 @@ public class GlobalDaoFactory {
         String orderDaoStr = p.getString("OrderDao");
         orderDao = (OrderDao) Class.forName(orderDaoStr).newInstance();
         String LogInDaoStr = p.getString("logInDao");
-        logInDao = (LogInDao) Class.forName(orderDaoStr).newInstance();
+        logInDao = (LogInDao) Class.forName(LogInDaoStr).newInstance();
         String Str = p.getString("checkerDao");
         checkerDao = (CheckerDao) Class.forName(Str).newInstance();
     }
